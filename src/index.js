@@ -112,7 +112,7 @@ app.patch('/todos/:id/done', checksExistsUserAccount, checksExistsTaskById, (req
 app.delete('/todos/:id', checksExistsUserAccount, checksExistsTaskById, (request, response) => {
   const { user, task } = request;
 
-  // Recolhendo o index com findIndex() para ser utilizado no slice()
+  // Recolhendo o index com indexOf() para ser utilizado no slice()
   const index = user.todos.indexOf(task);
 
   // Removedo a conta. slice(startIndex: qtdItems).
